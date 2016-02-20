@@ -64,6 +64,39 @@ class WaterLeadController extends Controller
             "user" => User::where('token', $request->token)->with('waterLead')->first(),
             "data" => $data,
             "google_result" => $google_places
-        ]);
+        ], 200);
     }
+
+    public function getAllSamples(Request $request) {
+        return Response::json([
+            "status" => "OK",
+            "response" => WaterLead::with('user')->get()
+        ], 200);
+    }
+
+    public function getSample(Request $request) {
+        $validator = Validator::make($request->all(), [
+            "id" => "require"
+        ]);
+
+        if($validator->fails()) {
+            return Response::json([
+                "status" => "NOT_OK",
+                "response" => "Required fields: id"
+            ], 200);
+        }
+
+        if(is_numeric($request->id)) {
+            $field = "id";
+        }
+        else {
+            $field = "g_place_id";
+        }
+
+        return Response::json([
+            "status" => "OK",
+            "response" => WaterLead::with('user')->where($field, $request->id)->first()
+        ], 200);
+    }
+
 }

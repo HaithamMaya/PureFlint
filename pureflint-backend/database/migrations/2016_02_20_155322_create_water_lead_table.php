@@ -27,7 +27,7 @@ class CreateWaterLeadTable extends Migration
             $table->string('g_place_id')->nullable();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->datetime('date_of_test')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->string('date_of_test')->nullable();
             $table->timestamps();
         });
     }

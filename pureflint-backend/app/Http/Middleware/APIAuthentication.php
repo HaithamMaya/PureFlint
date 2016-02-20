@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\User;
 use Closure;
+use Response;
 
 class APIAuthentication
 {
@@ -21,7 +22,7 @@ class APIAuthentication
             return Response::json([
                 "status" => "NOT_OK",
                 "response" => "A token is required to access this route."
-            ], 200);
+            ], 400);
         }
 
         $user = User::where('token', $request->token)->first();
@@ -31,7 +32,7 @@ class APIAuthentication
             return Response::json([
                 "status" => "NOT_OK",
                 "response" => "This user was not found."
-            ], 200);
+            ], 400);
         }
 
         return $next($request);

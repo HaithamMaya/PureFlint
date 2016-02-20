@@ -30,6 +30,8 @@ Route::group(['prefix' => '/api/v0.1'], function() {
     Route::group(['middleware' => 'pureflint'], function() {
         Route::group(['prefix' => 'water'], function() {
             Route::post('create', "WaterLeadController@create");
+            Route::get('samples/list', "WaterLeadController@getAllSamples");
+            Route::get('samples/list/{id}', "WaterLeadController@getSample");
         });
     });
     

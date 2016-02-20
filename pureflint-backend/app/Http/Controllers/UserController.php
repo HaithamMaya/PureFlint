@@ -21,21 +21,13 @@ class UserController extends Controller
         if($validator->fails()) {
             return Response::json([
                 "status" => "NOT_OK",
-                "response" => "Required fields: email"
+                "response" => "This provided string is not an email address."
             ], 400);
-        }
-
-        $user = User::where('email', $request->email)->first();
-        if(!$user) {
-            return Response::json([
-                "status" => "OK",
-                "response" => "User not found."
-            ], 404);
         }
         else {
             return Response::json([
                 "status" => "OK",
-                "response" => "User found."
+                "response" => "This is a real email address."
             ], 200);
         }
     }
