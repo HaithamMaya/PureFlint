@@ -89,6 +89,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PureFlint/Realm.framework"
   install_framework "Pods-PureFlint/RealmSwift.framework"
   install_framework "Pods-PureFlint/SwiftyJSON.framework"
+  install_framework "Pods-PureFlint/TextFieldEffects.framework"
+  install_framework "Pods-PureFlint/UIColor_Hex_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PureFlint/Alamofire.framework"
@@ -96,4 +98,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PureFlint/Realm.framework"
   install_framework "Pods-PureFlint/RealmSwift.framework"
   install_framework "Pods-PureFlint/SwiftyJSON.framework"
+  install_framework "Pods-PureFlint/TextFieldEffects.framework"
+  install_framework "Pods-PureFlint/UIColor_Hex_Swift.framework"
 fi

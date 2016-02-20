@@ -7,12 +7,16 @@ PODS:
   - RealmSwift (0.98.2):
     - Realm (= 0.98.2)
   - SwiftyJSON (2.3.2)
+  - TextFieldEffects (1.1.0)
+  - UIColor_Hex_Swift (1.9)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - IBAnimatable (~> 1.2)
   - RealmSwift
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TextFieldEffects
+  - UIColor_Hex_Swift (~> 1.9)
 
 EXTERNAL SOURCES:
   SwiftyJSON:
@@ -29,5 +33,7 @@ SPEC CHECKSUMS:
   Realm: 88a147fe04b8f07191a676b15c779b2b448991de
   RealmSwift: 9907c7415b3e19ef2ab9f89878fc890f03f93aea
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TextFieldEffects: 8e43fea8836e97be80fc4db27a1596c9e98a26ba
+  UIColor_Hex_Swift: 2ee747c0fed8b72b2135ef474b80a6921e489daa
 
 COCOAPODS: 0.39.0
