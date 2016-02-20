@@ -9,6 +9,7 @@
 import UIKit
 import TextFieldEffects
 import IBAnimatable
+import Dodo
 
 class CreateAccountViewController: UIViewController {
     
@@ -23,18 +24,33 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        // Kerning
         viewTitleLabel.kern(1)
         fullNameLabel.kern(1)
         emailLabel.kern(1)
-        
         nextButton.kern(1)
         
+        // Guestures
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        // Setting up error
+        view.dodo.topLayoutGuide = topLayoutGuide
+        view.dodo.bottomLayoutGuide = bottomLayoutGuide
+        view.dodo.style.bar.hideAfterDelaySeconds = 3
+        view.dodo.style.bar.animationShow = DodoAnimations.SlideVertically.show
+        view.dodo.style.bar.animationHide = DodoAnimations.SlideVertically.hide
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let DestinationController: PasswordViewController = segue.destinationViewController as! PasswordViewController
+        
+        DestinationController.name = fullNameField.text
+        DestinationController.email = emailField.text
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,18 +62,23 @@ class CreateAccountViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(sender: AnyObject) {
-        if name
+        if fullNameField.text == "" {
+            displayError("You cannot leave the name field blank")
+        } else if emailField.text == "" {
+            displayError("You cannot leave the email field blank.")
+        } else {
+            API.checkEmail(emailField.text!) { (success, data) -> Void in
+                if success == true {
+                    self.performSegueWithIdentifier("toPassword", sender: self)
+                } else {
+                    self.displayError("Your email doesn't appear to be working. Please check your email and try again.")
+                    print(data)
+                }
+            }
+        }
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func displayError(errorMessage: String) {
+        view.dodo.error("\(errorMessage)")
     }
-    */
-
 }

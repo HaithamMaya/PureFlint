@@ -9,25 +9,33 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-
-var name = ""
-var email = ""
-var password = ""
-var role = Int()
+import TextFieldEffects
+import IBAnimatable
 
 class PasswordViewController: UIViewController {
     
+    @IBOutlet weak var viewTitle: UILabel!
+    @IBOutlet weak var passwordFieldLabel: UILabel!
+    @IBOutlet weak var confirmPasswordFieldLabel: UILabel!
+    
+    
+    @IBOutlet weak var passwordTextField: YokoTextField!
+    @IBOutlet weak var confirmPasswordTextField: YokoTextField!
+    
+    @IBOutlet weak var getStartedButton: AnimatableButton!
+    
+    var name: String?
+    var email: String?
+    var password: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-//        var parameters = [
-//            "name": name,
-//            "email": email,
-//            "password": password,
-//            "role-id": role
-//        ]
+        viewTitle.kern(1)
+        passwordFieldLabel.kern(1)
+        confirmPasswordFieldLabel.kern(1)
+        
+        getStartedButton.kern(1)
     }
 
     override func didReceiveMemoryWarning() {
