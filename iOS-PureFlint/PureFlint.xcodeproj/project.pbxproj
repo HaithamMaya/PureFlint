@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F6651DEF3DE5EEEC5241097 /* Pods_PureFlint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B4A88DB2F9FF56756B3C29 /* Pods_PureFlint.framework */; };
 		CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C121C7831F400195F5C /* AppDelegate.swift */; };
-		CF6E5C151C7831F400195F5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C141C7831F400195F5C /* ViewController.swift */; };
+		CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C141C7831F400195F5C /* MainViewController.swift */; };
 		CF6E5C181C7831F400195F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E5C161C7831F400195F5C /* Main.storyboard */; };
 		CF6E5C1B1C7831F400195F5C /* PureFlint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C191C7831F400195F5C /* PureFlint.xcdatamodeld */; };
 		CF6E5C1D1C7831F400195F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E5C1C1C7831F400195F5C /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 		A3FDDACEA2D03CE88C9AA79A /* Pods-PureFlint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureFlint.release.xcconfig"; path = "Pods/Target Support Files/Pods-PureFlint/Pods-PureFlint.release.xcconfig"; sourceTree = "<group>"; };
 		CF6E5C0F1C7831F400195F5C /* PureFlint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureFlint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E5C121C7831F400195F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF6E5C141C7831F400195F5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF6E5C141C7831F400195F5C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF6E5C171C7831F400195F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF6E5C1A1C7831F400195F5C /* PureFlint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PureFlint.xcdatamodel; sourceTree = "<group>"; };
 		CF6E5C1C1C7831F400195F5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +98,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF4F39FF1C783A5D0031A310 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entry;
+			sourceTree = "<group>";
+		};
+		CF4F3A001C783A7A0031A310 /* DataVisualization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataVisualization;
+			sourceTree = "<group>";
+		};
+		CF4F3A011C783A830031A310 /* Reporter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Reporter;
+			sourceTree = "<group>";
+		};
 		CF6E5C061C7831F400195F5C = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +144,11 @@
 		CF6E5C111C7831F400195F5C /* PureFlint */ = {
 			isa = PBXGroup;
 			children = (
+				CF4F39FF1C783A5D0031A310 /* Entry */,
 				CF6E5C121C7831F400195F5C /* AppDelegate.swift */,
-				CF6E5C141C7831F400195F5C /* ViewController.swift */,
+				CF4F3A001C783A7A0031A310 /* DataVisualization */,
+				CF6E5C141C7831F400195F5C /* MainViewController.swift */,
+				CF4F3A011C783A830031A310 /* Reporter */,
 				CF6E5C161C7831F400195F5C /* Main.storyboard */,
 				CF6E5C1C1C7831F400195F5C /* Assets.xcassets */,
 				CF6E5C1E1C7831F400195F5C /* LaunchScreen.storyboard */,
@@ -334,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF6E5C151C7831F400195F5C /* ViewController.swift in Sources */,
+				CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */,
 				CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */,
 				CF6E5C1B1C7831F400195F5C /* PureFlint.xcdatamodeld in Sources */,
 			);
