@@ -15,12 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group('/api/v0.1', function() {
-	Route::get('heartbeat', function() {
-		return Response::json([
-			"response" => "OK"
-		], 200);
-	});
+Route::group(['prefix' => '/api/v0.1'], function() {
+
+    // heartbeat
+	Route::get('heartbeat', "BaselineController@heartbeat");
+
+    // user login
+    Route::group(['prefix' => 'user'], function() {
+        Route::post('register', "UserController@register");
+    });
+    
+
 });
 
 /*
