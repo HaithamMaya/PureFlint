@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group('/api/v0.1', function() {
+	Route::get('heartbeat', function() {
+		return Response::json([
+			"response" => "OK"
+		], 200);
+	});
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
