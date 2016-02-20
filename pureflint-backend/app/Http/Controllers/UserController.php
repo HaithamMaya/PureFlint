@@ -14,7 +14,30 @@ use Response;
 class UserController extends Controller
 {
     public function exists(Request $request) {
+        $validator = Validator::make($request->all(), [
+            "email" => "required|email"
+        ]);
 
+        if($validator->fails()) {
+            return Response::json([
+                "status" => "NOT_OK",
+                "response" => "Required fields: email"
+            ], 400);
+        }
+
+        $user = User::where('email', $request->email)->first();
+        if(!$user) {
+            return Response::json([
+                "status" => "OK",
+                "response" => "User not found."
+            ], 404);
+        }
+        else {
+            return Response::json([
+                "status" => "OK",
+                "response" => "User found."
+            ], 200);
+        }
     }
 
     public function register(Request $request) {
