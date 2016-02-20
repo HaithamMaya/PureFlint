@@ -7,6 +7,7 @@ target 'PureFlint' do
 pod 'Alamofire', '~> 3.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'RealmSwift'
+pod 'IBAnimatable', '~> 1.2'
 
 end
 
@@ -17,4 +18,3 @@ end
 target 'PureFlintUITests' do
 
 end
-

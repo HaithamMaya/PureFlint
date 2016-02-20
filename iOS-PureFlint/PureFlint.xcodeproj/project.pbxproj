@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6F6651DEF3DE5EEEC5241097 /* Pods_PureFlint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B4A88DB2F9FF56756B3C29 /* Pods_PureFlint.framework */; };
+		B360F1421C78677500320B8A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B360F1411C78677500320B8A /* Media.xcassets */; };
 		CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C121C7831F400195F5C /* AppDelegate.swift */; };
 		CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C141C7831F400195F5C /* MainViewController.swift */; };
 		CF6E5C181C7831F400195F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E5C161C7831F400195F5C /* Main.storyboard */; };
 		CF6E5C1B1C7831F400195F5C /* PureFlint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C191C7831F400195F5C /* PureFlint.xcdatamodeld */; };
-		CF6E5C1D1C7831F400195F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6E5C1C1C7831F400195F5C /* Assets.xcassets */; };
 		CF6E5C201C7831F400195F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E5C1E1C7831F400195F5C /* LaunchScreen.storyboard */; };
 		CF6E5C2B1C7831F400195F5C /* PureFlintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C2A1C7831F400195F5C /* PureFlintTests.swift */; };
 		CF6E5C361C7831F400195F5C /* PureFlintUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C351C7831F400195F5C /* PureFlintUITests.swift */; };
@@ -38,12 +38,12 @@
 /* Begin PBXFileReference section */
 		50B4A88DB2F9FF56756B3C29 /* Pods_PureFlint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PureFlint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3FDDACEA2D03CE88C9AA79A /* Pods-PureFlint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureFlint.release.xcconfig"; path = "Pods/Target Support Files/Pods-PureFlint/Pods-PureFlint.release.xcconfig"; sourceTree = "<group>"; };
+		B360F1411C78677500320B8A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../Media.xcassets; sourceTree = "<group>"; };
 		CF6E5C0F1C7831F400195F5C /* PureFlint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureFlint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E5C121C7831F400195F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6E5C141C7831F400195F5C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CF6E5C171C7831F400195F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF6E5C1A1C7831F400195F5C /* PureFlint.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PureFlint.xcdatamodel; sourceTree = "<group>"; };
-		CF6E5C1C1C7831F400195F5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF6E5C1F1C7831F400195F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF6E5C211C7831F400195F5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF6E5C261C7831F400195F5C /* PureFlintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureFlintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,14 +144,14 @@
 		CF6E5C111C7831F400195F5C /* PureFlint */ = {
 			isa = PBXGroup;
 			children = (
-				CF4F39FF1C783A5D0031A310 /* Entry */,
-				CF6E5C121C7831F400195F5C /* AppDelegate.swift */,
-				CF4F3A001C783A7A0031A310 /* DataVisualization */,
-				CF6E5C141C7831F400195F5C /* MainViewController.swift */,
-				CF4F3A011C783A830031A310 /* Reporter */,
-				CF6E5C161C7831F400195F5C /* Main.storyboard */,
-				CF6E5C1C1C7831F400195F5C /* Assets.xcassets */,
 				CF6E5C1E1C7831F400195F5C /* LaunchScreen.storyboard */,
+				CF6E5C161C7831F400195F5C /* Main.storyboard */,
+				CF6E5C121C7831F400195F5C /* AppDelegate.swift */,
+				CF6E5C141C7831F400195F5C /* MainViewController.swift */,
+				B360F1411C78677500320B8A /* Media.xcassets */,
+				CF4F39FF1C783A5D0031A310 /* Entry */,
+				CF4F3A001C783A7A0031A310 /* DataVisualization */,
+				CF4F3A011C783A830031A310 /* Reporter */,
 				CF6E5C211C7831F400195F5C /* Info.plist */,
 				CF6E5C191C7831F400195F5C /* PureFlint.xcdatamodeld */,
 			);
@@ -284,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6E5C201C7831F400195F5C /* LaunchScreen.storyboard in Resources */,
-				CF6E5C1D1C7831F400195F5C /* Assets.xcassets in Resources */,
+				B360F1421C78677500320B8A /* Media.xcassets in Resources */,
 				CF6E5C181C7831F400195F5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
