@@ -72,4 +72,36 @@ class UserController extends Controller
         ], 200);
 
     }
+
+    public function login(Request $request) {
+        $validator = Validator::make($request->all(), [
+            "email" => "required|email",
+            "password" => "required|min:8|max:16"
+        ]);
+
+        if($validator->fails()) {
+            return Response::json([
+                "status" => "NOT_OK",
+                "response" => "Required fields: email, password"
+            ], 400);
+        }
+
+        $user = User::where('email', $request->email)->first();
+        if(!$user) {
+            return Response::json([
+                "status" => "NOT_OK",
+                "response" => "User not found."
+            ], 404);
+        }
+        else {
+            $user->token = md5($user->password . time());
+            $user->save();
+            return Response::json([
+                "status" => "OK",
+                "response" => "User successfully found.",
+                "user" => $user,
+                "token" => $user->token
+            ], 200);
+        }
+    }
 }

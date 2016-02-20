@@ -24,6 +24,7 @@ Route::group(['prefix' => '/api/v0.1'], function() {
     Route::group(['prefix' => 'user'], function() {
         Route::post('exists', "UserController@exists");
         Route::post('register', "UserController@register");
+        Route::post('login', "UserController@login");
     });
     
 
