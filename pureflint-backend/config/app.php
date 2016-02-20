@@ -52,8 +52,9 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
-
+    // 'timezone' => 'UTC',
+    'timezone' => 'America/New_York',
+    
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration

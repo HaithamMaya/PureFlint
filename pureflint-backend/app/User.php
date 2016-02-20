@@ -27,4 +27,8 @@ class User extends Authenticatable
     protected $guarded = [
         'id', 'created_at', 'updated_at'
     ];
+
+    public function waterLead() {
+        return $this->hasMany('App\WaterLead', 'user_id', 'id');
+    }
 }

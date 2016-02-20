@@ -26,6 +26,12 @@ Route::group(['prefix' => '/api/v0.1'], function() {
         Route::post('register', "UserController@register");
         Route::post('login', "UserController@login");
     });
+
+    Route::group(['middleware' => 'pureflint'], function() {
+        Route::group(['prefix' => 'water'], function() {
+            Route::post('create', "WaterLeadController@create");
+        });
+    });
     
 
 });
