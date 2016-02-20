@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import IBAnimatable
 
 extension UIColor {
     convenience init(hexString:String) {
@@ -44,5 +45,24 @@ extension UIColor {
         let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
         
         return NSString(format:"#%06x", rgb) as String
+    }
+}
+
+extension UILabel {
+    func kern(kerningValue:CGFloat) {
+        self.attributedText =  NSAttributedString(string: self.text ?? "", attributes: [NSKernAttributeName:kerningValue, NSFontAttributeName:font, NSForegroundColorAttributeName:self.textColor])
+    }
+}
+
+extension UIButton {
+    func kern(kerningValue:CGFloat) {
+        let attributedText =  NSAttributedString(string: self.titleLabel!.text!, attributes: [NSKernAttributeName:kerningValue, NSFontAttributeName:self.titleLabel!.font, NSForegroundColorAttributeName:self.titleLabel!.textColor])
+        self.setAttributedTitle(attributedText, forState: UIControlState.Normal)
+    }
+}
+
+extension AnimatableLabel {
+    override func kern(kerningValue:CGFloat) {
+        self.attributedText =  NSAttributedString(string: self.text ?? "", attributes: [NSKernAttributeName:kerningValue, NSFontAttributeName:font, NSForegroundColorAttributeName:self.textColor])
     }
 }

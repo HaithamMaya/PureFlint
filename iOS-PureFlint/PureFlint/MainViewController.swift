@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import IBAnimatable
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var viewTitle: AnimatableLabel!
+    @IBOutlet weak var signUpButton: AnimatableButton!
+    @IBOutlet weak var logInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        viewTitle.kern(1)
+        signUpButton.kern(1)
+        logInButton.kern(1)
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,12 +22,12 @@ class PasswordViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        var parameters = [
-            "name": name,
-            "email": email,
-            "password": password,
-            "role-id": role
-        ]
+//        var parameters = [
+//            "name": name,
+//            "email": email,
+//            "password": password,
+//            "role-id": role
+//        ]
     }
 
     override func didReceiveMemoryWarning() {

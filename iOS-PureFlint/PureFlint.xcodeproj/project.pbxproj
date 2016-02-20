@@ -12,6 +12,7 @@
 		B37629C01C78C19200503E2E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37629BF1C78C19200503E2E /* API.swift */; };
 		B37629C21C78C9E500503E2E /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37629C11C78C9E500503E2E /* PasswordViewController.swift */; };
 		B37629C41C78D08C00503E2E /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37629C31C78D08C00503E2E /* CreateAccountViewController.swift */; };
+		B3BDC2581C78DE68004AA67E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDC2571C78DE68004AA67E /* Extensions.swift */; };
 		CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C121C7831F400195F5C /* AppDelegate.swift */; };
 		CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C141C7831F400195F5C /* MainViewController.swift */; };
 		CF6E5C181C7831F400195F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E5C161C7831F400195F5C /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		B37629BF1C78C19200503E2E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = ../API.swift; sourceTree = "<group>"; };
 		B37629C11C78C9E500503E2E /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		B37629C31C78D08C00503E2E /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		B3BDC2571C78DE68004AA67E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CF6E5C0F1C7831F400195F5C /* PureFlint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureFlint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E5C121C7831F400195F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6E5C141C7831F400195F5C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -104,9 +106,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B31DD58A1C78F13800CE13C4 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3BDC2571C78DE68004AA67E /* Extensions.swift */,
+				B37629BF1C78C19200503E2E /* API.swift */,
+			);
+			name = "Helper Files";
+			sourceTree = "<group>";
+		};
 		CF4F39FF1C783A5D0031A310 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
+				CF6E5C141C7831F400195F5C /* MainViewController.swift */,
+				B37629C31C78D08C00503E2E /* CreateAccountViewController.swift */,
+				B37629C11C78C9E500503E2E /* PasswordViewController.swift */,
 			);
 			name = Entry;
 			sourceTree = "<group>";
@@ -150,15 +164,12 @@
 		CF6E5C111C7831F400195F5C /* PureFlint */ = {
 			isa = PBXGroup;
 			children = (
+				CF6E5C121C7831F400195F5C /* AppDelegate.swift */,
+				CF4F39FF1C783A5D0031A310 /* Entry */,
+				B31DD58A1C78F13800CE13C4 /* Helper Files */,
 				CF6E5C1E1C7831F400195F5C /* LaunchScreen.storyboard */,
 				CF6E5C161C7831F400195F5C /* Main.storyboard */,
-				B37629BF1C78C19200503E2E /* API.swift */,
-				CF6E5C121C7831F400195F5C /* AppDelegate.swift */,
-				B37629C31C78D08C00503E2E /* CreateAccountViewController.swift */,
-				B37629C11C78C9E500503E2E /* PasswordViewController.swift */,
-				CF6E5C141C7831F400195F5C /* MainViewController.swift */,
 				B360F1411C78677500320B8A /* Media.xcassets */,
-				CF4F39FF1C783A5D0031A310 /* Entry */,
 				CF4F3A001C783A7A0031A310 /* DataVisualization */,
 				CF4F3A011C783A830031A310 /* Reporter */,
 				CF6E5C211C7831F400195F5C /* Info.plist */,
@@ -368,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B37629C41C78D08C00503E2E /* CreateAccountViewController.swift in Sources */,
+				B3BDC2581C78DE68004AA67E /* Extensions.swift in Sources */,
 				CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */,
 				B37629C21C78C9E500503E2E /* PasswordViewController.swift in Sources */,
 				CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */,
