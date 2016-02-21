@@ -38,11 +38,9 @@ class CreateAccountViewController: UIViewController {
         // Setting up error
         view.dodo.topLayoutGuide = topLayoutGuide
         view.dodo.bottomLayoutGuide = bottomLayoutGuide
-        view.dodo.style.bar.hideAfterDelaySeconds = 3
+        view.dodo.style.bar.hideAfterDelaySeconds = 2
         view.dodo.style.bar.animationShow = DodoAnimations.SlideVertically.show
         view.dodo.style.bar.animationHide = DodoAnimations.SlideVertically.hide
-        
-        
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -12,6 +12,7 @@ import SwiftyJSON
 import TextFieldEffects
 import IBAnimatable
 import Dodo
+import RealmSwift
 
 class PasswordViewController: UIViewController {
     
@@ -24,7 +25,7 @@ class PasswordViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: YokoTextField!
     
     @IBOutlet weak var getStartedButton: AnimatableButton!
-    
+
     var name: String?
     var email: String?
     var password: String?
@@ -44,11 +45,11 @@ class PasswordViewController: UIViewController {
         // Setting up error
         view.dodo.topLayoutGuide = topLayoutGuide
         view.dodo.bottomLayoutGuide = bottomLayoutGuide
-        view.dodo.style.bar.hideAfterDelaySeconds = 3
+        view.dodo.style.bar.hideAfterDelaySeconds = 2
         view.dodo.style.bar.animationShow = DodoAnimations.SlideVertically.show
         view.dodo.style.bar.animationHide = DodoAnimations.SlideVertically.hide
         
-        password = confirmPasswordTextField.text
+        passwordTextField.secureTextEntry = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +67,8 @@ class PasswordViewController: UIViewController {
     }
     
     @IBAction func getStarted(sender: AnyObject) {
+        password = passwordTextField.text
+        
         if passwordTextField.text == "" {
             displayError("Enter your password!")
         } else if confirmPasswordTextField.text == "" {
@@ -80,6 +83,13 @@ class PasswordViewController: UIViewController {
             API.registerUser(name!, email: email!, password: password!, role: 3, completion: { (success, data) -> Void in
                 if success == true {
                     print(data)
+                    
+                    let tokenToSave = data["token"].string
+                    
+                    let userData = UserData()
+                    userData.token = tokenToSave!
+                    
+                    print(userData.token)
                 } else {
                     self.displayError("Something went wrong, please try again later.")
                     print(data)
@@ -87,15 +97,4 @@ class PasswordViewController: UIViewController {
             })
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
 }

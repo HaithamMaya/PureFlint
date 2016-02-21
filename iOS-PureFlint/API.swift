@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Realm
 
 class API {
     
@@ -26,11 +27,11 @@ class API {
     }
     
     static func checkEmail(userEmail: String, completion: (success: Bool, data: JSON) -> Void) {
-        let emailToBeChecked: [String : AnyObject] = [
+        let parameters: [String : AnyObject] = [
             "email":userEmail
         ]
         
-        Alamofire.request(Method.POST, self.baseURL + "user/exists", parameters: emailToBeChecked, encoding: ParameterEncoding.URL, headers: nil).responseJSON { (response) -> Void in
+        Alamofire.request(Method.POST, self.baseURL + "user/exists", parameters: parameters, encoding: ParameterEncoding.URL, headers: nil).responseJSON { (response) -> Void in
             print(response.debugDescription)
             
             if response.response?.statusCode == 200 {
@@ -47,10 +48,31 @@ class API {
             "name": name,
             "email": email,
             "password": password,
-            "role": role
+            "role_id": role
         ]
         
-        Alamofire.request(Method.POST, self.baseURL + "user/register", parameters: parameters, encoding: ParameterEncoding.URL, headers: nil)
+        Alamofire.request(Method.POST, self.baseURL + "user/register", parameters: parameters, encoding: ParameterEncoding.URL, headers: nil).responseJSON { (response) -> Void in
+            print(response.debugDescription)
+            
+            if response.response?.statusCode == 200 {
+                completion(success: true, data: JSON(response.result.value!))
+            }
+            else {
+                completion(success: false, data: nil)
+            }
+        }
     }
     
+    static func logInUser(email: String, password: String, completion: (success: Bool, data: JSON) -> Void) {
+        let parameters: [String : AnyObject] = [
+            "email": email,
+            "password": password,
+        ]
+        
+        Alamofire.request(Method.POST, self.baseURL + "user/login", parameters: parameters, encoding: ParameterEncoding.URL, headers: nil)
+    }
+}
+
+class UserData: RLMObject {
+    dynamic var token = ""
 }

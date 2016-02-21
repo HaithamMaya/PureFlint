@@ -14,8 +14,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var viewTitle: AnimatableLabel!
     @IBOutlet weak var signUpButton: AnimatableButton!
     
-    
-    
     @IBOutlet weak var logInButton: UIButton!
     
     override func viewDidLoad() {
@@ -31,6 +29,5 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
 

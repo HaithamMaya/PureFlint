@@ -14,6 +14,8 @@
 		B37629C41C78D08C00503E2E /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37629C31C78D08C00503E2E /* CreateAccountViewController.swift */; };
 		B3BDC2581C78DE68004AA67E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDC2571C78DE68004AA67E /* Extensions.swift */; };
 		B3E0C9C61C7910BE00489788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E0C9C51C7910BE00489788 /* Main.storyboard */; };
+		B3E0C9C81C792DE100489788 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E0C9C71C792DE100489788 /* LogInViewController.swift */; };
+		B3F05E701C794AB1006CDEBA /* TapTransition 20-23-17-869.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F05E6F1C794AB1006CDEBA /* TapTransition 20-23-17-869.swift */; };
 		CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C121C7831F400195F5C /* AppDelegate.swift */; };
 		CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C141C7831F400195F5C /* MainViewController.swift */; };
 		CF6E5C1B1C7831F400195F5C /* PureFlint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C191C7831F400195F5C /* PureFlint.xcdatamodeld */; };
@@ -48,6 +50,8 @@
 		B37629C31C78D08C00503E2E /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		B3BDC2571C78DE68004AA67E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B3E0C9C51C7910BE00489788 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B3E0C9C71C792DE100489788 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		B3F05E6F1C794AB1006CDEBA /* TapTransition 20-23-17-869.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TapTransition 20-23-17-869.swift"; path = "../../../../.Trash/TapTransition 20-23-17-869.swift"; sourceTree = "<group>"; };
 		CF6E5C0F1C7831F400195F5C /* PureFlint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureFlint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E5C121C7831F400195F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6E5C141C7831F400195F5C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		B31DD58A1C78F13800CE13C4 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3F05E6F1C794AB1006CDEBA /* TapTransition 20-23-17-869.swift */,
 				B3BDC2571C78DE68004AA67E /* Extensions.swift */,
 				B37629BF1C78C19200503E2E /* API.swift */,
 			);
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				CF6E5C141C7831F400195F5C /* MainViewController.swift */,
+				B3E0C9C71C792DE100489788 /* LogInViewController.swift */,
 				B37629C31C78D08C00503E2E /* CreateAccountViewController.swift */,
 				B37629C11C78C9E500503E2E /* PasswordViewController.swift */,
 			);
@@ -382,9 +388,11 @@
 				B3BDC2581C78DE68004AA67E /* Extensions.swift in Sources */,
 				CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */,
 				B37629C21C78C9E500503E2E /* PasswordViewController.swift in Sources */,
+				B3E0C9C81C792DE100489788 /* LogInViewController.swift in Sources */,
 				CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */,
 				B37629C01C78C19200503E2E /* API.swift in Sources */,
 				CF6E5C1B1C7831F400195F5C /* PureFlint.xcdatamodeld in Sources */,
+				B3F05E701C794AB1006CDEBA /* TapTransition 20-23-17-869.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
