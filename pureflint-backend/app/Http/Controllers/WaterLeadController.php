@@ -68,9 +68,11 @@ class WaterLeadController extends Controller
     }
 
     public function getAllSamples(Request $request) {
+        $data = WaterLead::with('user')->get();
         return Response::json([
             "status" => "OK",
-            "response" => WaterLead::with('user')->get()
+            "count" => count($data),
+            "response" => $data
         ], 200);
     }
 

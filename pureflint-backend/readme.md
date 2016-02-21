@@ -4,7 +4,7 @@
 [GET] /api/v0.1/heartbeat
 
 #### User:
-[POST] /api/v0.1/user/exists
+##### [POST] /api/v0.1/user/exists
 
 Parameters:
 - email (required: email format)
@@ -16,7 +16,7 @@ Parameters:
 }
 ```
 
-[POST] /api/v0.1/user/login
+##### [POST] /api/v0.1/user/login
 
 Parameters:
 - email (required: email format)
@@ -38,7 +38,7 @@ Parameters:
 }
 ```
 
-[POST] /api/v0.1/user/register
+##### [POST] /api/v0.1/user/register
 
 Parameters:
 - name
@@ -65,7 +65,7 @@ Parameters:
 }
 ```
 
-[POST] /api/v0.1/water/create
+##### [POST] /api/v0.1/water/create
 
 Parameters:
 - [required] address
@@ -224,5 +224,105 @@ Parameters:
     ],
     "status": "OK"
   }
+}
+```
+
+##### [GET] /api/v0.1/water/samples/list
+```javascript
+{
+  "status": "OK",
+  "response": [
+    {
+      "id": 1,
+      "address": "1930 Colchester Rd, Flint, MI 48503, USA",
+      "zip_code": "48503",
+      "latitude": "42.9941",
+      "longitude": "-83.7238",
+      "water_source": null,
+      "water_test_kit_type": null,
+      "water_filter_type": null,
+      "water_usage": null,
+      "copper_ppb": "0",
+      "lead_ppb": "0",
+      "g_place_id": "ChIJ44izwHx4I4gRxDE2_WasxTw",
+      "user_id": "1",
+      "date_of_test": "2015-09-25 11:07:30",
+      "created_at": "2016-02-20 17:04:06",
+      "updated_at": "2016-02-20 17:04:06",
+      "user": {
+        "id": 1,
+        "name": "blah2",
+        "email": "blah234445@gmail.com",
+        "role_id": "1",
+        "created_at": "2016-02-20 06:04:40",
+        "updated_at": "2016-02-20 07:03:43"
+      }
+    },
+    {
+      "id": 2,
+      "address": "Flint, MI 48503, USA",
+      "zip_code": "48503",
+      "latitude": "43.0146",
+      "longitude": "-83.6721",
+      "water_source": null,
+      "water_test_kit_type": null,
+      "water_filter_type": null,
+      "water_usage": null,
+      "copper_ppb": "0",
+      "lead_ppb": "0",
+      "g_place_id": "ChIJz6AiBBCCI4gRfkOCDX0_z4s",
+      "user_id": "1",
+      "date_of_test": "2015-09-29 14:35:09",
+      "created_at": "2016-02-20 17:04:06",
+      "updated_at": "2016-02-20 17:04:06",
+      "user": {
+        "id": 1,
+        "name": "blah2",
+        "email": "blah234445@gmail.com",
+        "role_id": "1",
+        "created_at": "2016-02-20 06:04:40",
+        "updated_at": "2016-02-20 07:03:43"
+      }
+    }
+  ]
+}
+```
+
+##### [GET] /api/v0.1/water/samples/list/{id}
+
+Parameters:
+- id: primary key OR Google Places ID
+
+```javascript
+{
+  "status": "OK",
+  "response": [
+    {
+      "id": 1,
+      "address": "1930 Colchester Rd, Flint, MI 48503, USA",
+      "zip_code": "48503",
+      "latitude": "42.9941",
+      "longitude": "-83.7238",
+      "water_source": null,
+      "water_test_kit_type": null,
+      "water_filter_type": null,
+      "water_usage": null,
+      "copper_ppb": "0",
+      "lead_ppb": "0",
+      "g_place_id": "ChIJ44izwHx4I4gRxDE2_WasxTw",
+      "user_id": "1",
+      "date_of_test": "2015-09-25 11:07:30",
+      "created_at": "2016-02-20 17:04:06",
+      "updated_at": "2016-02-20 17:04:06",
+      "user": {
+        "id": 1,
+        "name": "blah2",
+        "email": "blah234445@gmail.com",
+        "role_id": "1",
+        "created_at": "2016-02-20 06:04:40",
+        "updated_at": "2016-02-20 07:03:43"
+      }
+    }
+  ]
 }
 ```
