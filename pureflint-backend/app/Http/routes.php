@@ -51,4 +51,7 @@ Route::group(['prefix' => '/api/v0.1'], function() {
 
 Route::group(['middleware' => ['web']], function () {
     //
+    Route::get('web/heatmap', function() {
+        return View::make('heatmap', ['points' => App\WaterLead::all()]);
+    });
 });
