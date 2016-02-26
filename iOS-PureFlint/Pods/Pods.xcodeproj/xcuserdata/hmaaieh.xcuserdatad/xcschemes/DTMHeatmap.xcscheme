@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4DAA84B980F2C670B76B38CD'
-               BlueprintName = 'RealmSwift'
+               BlueprintIdentifier = 'CA12E93499967C29354908AC'
+               BlueprintName = 'DTMHeatmap'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RealmSwift.framework'>
+               BuildableName = 'DTMHeatmap.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

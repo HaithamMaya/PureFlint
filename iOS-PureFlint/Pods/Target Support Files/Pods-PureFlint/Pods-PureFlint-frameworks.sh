@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-PureFlint/Alamofire.framework"
+  install_framework "Pods-PureFlint/DTMHeatmap.framework"
   install_framework "Pods-PureFlint/Dodo.framework"
   install_framework "Pods-PureFlint/IBAnimatable.framework"
   install_framework "Pods-PureFlint/Realm.framework"
@@ -95,6 +96,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-PureFlint/Alamofire.framework"
+  install_framework "Pods-PureFlint/DTMHeatmap.framework"
   install_framework "Pods-PureFlint/Dodo.framework"
   install_framework "Pods-PureFlint/IBAnimatable.framework"
   install_framework "Pods-PureFlint/Realm.framework"

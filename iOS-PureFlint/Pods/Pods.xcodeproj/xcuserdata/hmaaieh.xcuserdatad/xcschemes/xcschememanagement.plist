@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DTMHeatmap.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Dodo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IBAnimatable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PureFlint.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,10 +44,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIColor_Hex_Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>575FC1D7B2AA46680433B21275F53113</key>
+		<key>26EAD5DCEDE9079DE2F1ED286A086A9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A5E02F29D0FA1F58800151FF5110D7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A89033B6B08B7138095444EC0A0D0E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6157AAECD32C2901089265406A503474</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EC315864336CE5131AC7620A17C5D88</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,17 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B759E4FE6968A8707335162541D594DA</key>
+		<key>AF0A80A51C0CE9C374A0A4983DCD43A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C68F78213B326B50A619244B396E652A</key>
+		<key>EBABA53D1B03034D107B769E5100B537</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5B7E1D1717206C197FE96B8954F6F33</key>
+		<key>F11B0B414371D0FAA01F587211E43178</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA4B5C90ADF3AFF19AAE3411E2210A1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

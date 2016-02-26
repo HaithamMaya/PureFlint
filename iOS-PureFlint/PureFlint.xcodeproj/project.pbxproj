@@ -15,13 +15,13 @@
 		B3BDC2581C78DE68004AA67E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BDC2571C78DE68004AA67E /* Extensions.swift */; };
 		B3E0C9C61C7910BE00489788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E0C9C51C7910BE00489788 /* Main.storyboard */; };
 		B3E0C9C81C792DE100489788 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E0C9C71C792DE100489788 /* LogInViewController.swift */; };
-		B3F05E701C794AB1006CDEBA /* TapTransition 20-23-17-869.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F05E6F1C794AB1006CDEBA /* TapTransition 20-23-17-869.swift */; };
 		CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C121C7831F400195F5C /* AppDelegate.swift */; };
 		CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C141C7831F400195F5C /* MainViewController.swift */; };
 		CF6E5C1B1C7831F400195F5C /* PureFlint.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C191C7831F400195F5C /* PureFlint.xcdatamodeld */; };
 		CF6E5C201C7831F400195F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6E5C1E1C7831F400195F5C /* LaunchScreen.storyboard */; };
 		CF6E5C2B1C7831F400195F5C /* PureFlintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C2A1C7831F400195F5C /* PureFlintTests.swift */; };
 		CF6E5C361C7831F400195F5C /* PureFlintUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E5C351C7831F400195F5C /* PureFlintUITests.swift */; };
+		CFBC706B1C79ABD300CB90E0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC706A1C79ABD300CB90E0 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		B3BDC2571C78DE68004AA67E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B3E0C9C51C7910BE00489788 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3E0C9C71C792DE100489788 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		B3F05E6F1C794AB1006CDEBA /* TapTransition 20-23-17-869.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TapTransition 20-23-17-869.swift"; path = "../../../../.Trash/TapTransition 20-23-17-869.swift"; sourceTree = "<group>"; };
 		CF6E5C0F1C7831F400195F5C /* PureFlint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureFlint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E5C121C7831F400195F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF6E5C141C7831F400195F5C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		CF6E5C311C7831F400195F5C /* PureFlintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureFlintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E5C351C7831F400195F5C /* PureFlintUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureFlintUITests.swift; sourceTree = "<group>"; };
 		CF6E5C371C7831F400195F5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFBC706A1C79ABD300CB90E0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F3D502D5347B30BF02A9C8E7 /* Pods-PureFlint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureFlint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PureFlint/Pods-PureFlint.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +113,6 @@
 		B31DD58A1C78F13800CE13C4 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3F05E6F1C794AB1006CDEBA /* TapTransition 20-23-17-869.swift */,
 				B3BDC2571C78DE68004AA67E /* Extensions.swift */,
 				B37629BF1C78C19200503E2E /* API.swift */,
 			);
@@ -134,6 +133,7 @@
 		CF4F3A001C783A7A0031A310 /* DataVisualization */ = {
 			isa = PBXGroup;
 			children = (
+				CFBC706A1C79ABD300CB90E0 /* MapViewController.swift */,
 			);
 			name = DataVisualization;
 			sourceTree = "<group>";
@@ -388,11 +388,11 @@
 				B3BDC2581C78DE68004AA67E /* Extensions.swift in Sources */,
 				CF6E5C151C7831F400195F5C /* MainViewController.swift in Sources */,
 				B37629C21C78C9E500503E2E /* PasswordViewController.swift in Sources */,
+				CFBC706B1C79ABD300CB90E0 /* MapViewController.swift in Sources */,
 				B3E0C9C81C792DE100489788 /* LogInViewController.swift in Sources */,
 				CF6E5C131C7831F400195F5C /* AppDelegate.swift in Sources */,
 				B37629C01C78C19200503E2E /* API.swift in Sources */,
 				CF6E5C1B1C7831F400195F5C /* PureFlint.xcdatamodeld in Sources */,
-				B3F05E701C794AB1006CDEBA /* TapTransition 20-23-17-869.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

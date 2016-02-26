@@ -11,6 +11,7 @@ pod 'IBAnimatable', '~> 1.2'
 pod "TextFieldEffects"
 pod 'UIColor_Hex_Swift', '~> 1.9'
 pod 'Dodo', '~> 2.0'
+pod 'DTMHeatmap'
 
 end
 

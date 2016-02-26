@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4DAA84B980F2C670B76B38CD'
-               BlueprintName = 'RealmSwift'
+               BlueprintIdentifier = '73DEA47E6C8098561A3E8AF1'
+               BlueprintName = 'TextFieldEffects'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RealmSwift.framework'>
+               BuildableName = 'TextFieldEffects.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
